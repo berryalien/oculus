@@ -226,6 +226,7 @@ body {
 .tabs__content-img {
   grid-row: 1/-1;
   align-self: stretch;
+  object-fit: cover;
 }
 
 .tabs__content-item--active {
@@ -586,6 +587,20 @@ body {
 @media (max-width: 768px){}  */
 
 
+@media (max-width: 992px){
+  .tabs{
+    display: block;
+  }
+  .tabs__btn{
+    display: block;
+    column-count: 2;
+  }
+  .tabs__btn-item{
+    display: block;
+  }
+}  
+
+
 @media (max-width: 768px) {
   .title {
     font-size: 66px;
@@ -606,7 +621,17 @@ body {
 
   .top {
     text-align: center;
-
+  }
+  .features__title{
+    display: block;
+  }
+  .tabs__content-item{
+    display: block;
+  }
+  .video{
+    width: auto;
+    height: 250px;
+    margin-top: 20px;
   }
 }
 
@@ -619,4 +644,12 @@ body {
     font-size: 20px;
   }
 
+  .tabs__btn{
+    column-count: 1;
+
+  }
+
+  .features__text{
+    font-size: 32px;
+  }
 }
