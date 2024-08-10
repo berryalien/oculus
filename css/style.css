@@ -51,6 +51,8 @@ body {
   font-size: 16px;
   line-height: 1.4;
   color: #5c5c5e;
+  min-width: 320px;
+  overflow-x: hidden;
 }
 
 .container {
@@ -76,11 +78,11 @@ body {
 }
 
 .menu-btn {
-  width: 40px;
-  height: 30px;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
+  width: 40px;
+  height: 30px;
 }
 
 .menu-btn span {
@@ -95,6 +97,7 @@ body {
 }
 
 .logo {
+  display: flex;
   justify-self: center;
 }
 
@@ -649,6 +652,34 @@ body {
     font-size: 24px;
   }
 
+  .menu-btn {
+    display: flex;
+  }
+
+  .menu {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 320px;
+    background-color: #000;
+    color: #fff;
+    padding: 100px 0;
+    align-items: center;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: transform 1s;
+  }
+
+  .menu .menu--active {
+    transform: translateX(0%);
+  }
+
+  .menu__list{
+    font-size: 24px;
+    padding: 10px 0;
+    display: inline-block;
+  }
 }
 
 @media (max-width: 640px) {
@@ -702,6 +733,10 @@ body {
   .accessories__text {
     font-size: 28px;
   }
+
+  .nav {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
 }
 
 @media (max-width: 420px) {
@@ -720,5 +755,8 @@ body {
 
   .features__text {
     font-size: 32px;
+  }
+  .menu{
+    width: 100%;
   }
 }
